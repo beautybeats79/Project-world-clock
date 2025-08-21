@@ -1,97 +1,81 @@
 body {
-  margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
-  min-height: 100vh;
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+
+  /* Background with gradient and image */
+  background: linear-gradient(rgba(120, 90, 200, 0.6), rgba(255, 180, 220, 0.6)),
+    url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1500&q=80")
+      no-repeat center center fixed;
+  background-size: cover;
 }
 
-.card {
-  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80")
-      center/cover no-repeat,
-    rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  max-width: 650px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  z-index: 0;
-}
-
-.card > * {
-  position: relative;
-  z-index: 1;
+.card {
+  background: rgba(255, 255, 255, 0.15); /* lighter transparency */
+  backdrop-filter: blur(15px); /* glass effect */
+  -webkit-backdrop-filter: blur(15px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
+  font-size: 36px;
   margin-bottom: 20px;
-}
-
-.clock {
-  background: #fff;
-  border-radius: 50% 50% 40% 60% /60% 50% 50% 40%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  margin: 15px 0;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-  border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
-}
-
-.clock:last-child {
-  border-bottom: none;
-}
-
-.time {
-  font-size: 1.8rem;
   font-weight: bold;
+  color: #5a318f;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.time small {
-  font-size: 1rem;
-  vertical-align: middle;
-  line-height: 1.8rem;
-  margin-left: 4px;
-  color: #555;
-}
-
-.date {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.select-box {
-  text-align: center;
-  margin-bottom: 20px;
+.dropdown {
+  margin: 20px 0;
 }
 
 select {
-  padding: 10px 15px;
-  font-size: 1rem;
+  width: 100%;
+  padding: 12px;
   border-radius: 8px;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-footer {
-  margin-top: 20px;
-  font-size: 0.8rem;
-  color: #fff;
+.city {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 0;
+  text-align: left;
+}
+
+.city-name {
+  font-weight: bold;
+  font-size: 20px;
+  color: #2e003e;
+}
+
+.time {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5a318f;
+}
+
+.time span {
+  font-size: 14px;
+  vertical-align: super;
+  color: #444;
+}
+
+.date {
+  font-size: 12px;
+  color: #333;
 }
