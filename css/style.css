@@ -1,12 +1,11 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  height: 100vh;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 
-  /* Background with gradient and image */
   background: linear-gradient(rgba(120, 90, 200, 0.6), rgba(255, 180, 220, 0.6)),
     url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80")
       no-repeat center center fixed;
@@ -14,10 +13,10 @@ body {
 }
 
 .container {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .card {
@@ -29,6 +28,22 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   width: 400px;
   text-align: center;
+}
+
+.clock {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.3); /* 🔹 dotted line */
+}
+
+.clock:last-child {
+  border-bottom: none; /* 🔹 no line after last one */
 }
 
 h1 {
