@@ -1,22 +1,79 @@
-/* Container */
-.container {
-  max-width: 700px; /* ⬅️ Increased size */
-  margin: 60px auto;
-  background: url("images/clouds-bg.jpg") center/cover no-repeat; /* ⬅️ Cloudy background */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-/* Clock entries */
+.card {
+  background: url("images/clouds-bg.jpg") center/cover no-repeat,
+    rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 650px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
 .clock {
+  background: #fff;
+  border-radius: 50% 50% 40% 60% / 60% 50% 50% 40%;
+  padding: 20px;
+  margin: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px dotted rgba(0, 0, 0, 0.3); /* ⬅️ Faint dotted line */
-  padding: 15px 0;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-top: 1px dotted rgba(0, 0, 0, 0.2);
 }
 
 .clock:first-child {
-  border-top: none; /* ⬅️ Prevent dotted line above first city */
+  border-top: none;
+}
+
+.time {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.time small {
+  font-size: 1rem;
+  vertical-align: middle;
+  line-height: 1.8rem;
+  margin-left: 4px;
+  color: #555;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.select-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #fff;
 }
