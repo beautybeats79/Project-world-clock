@@ -1,73 +1,71 @@
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d8c7ff, #fbd3e9);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.container {
   max-width: 500px;
-  width: 100%;
+  width: 90%;
+  background: url("https://i.imgur.com/pn3v5fK.png") no-repeat center center /
+    cover;
+  /* ⬆️ cloud background image, you can replace with your own */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
+.header h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: rgba(75, 0, 130, 0.8);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.select-box select {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
   margin-bottom: 20px;
 }
 
 .clock {
-  background: #fff;
-  border-radius: 50% 50% 40% 60% / 60% 50% 50% 40%;
-  padding: 20px;
-  margin: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-top: 1px dashed #aaa;
+  padding: 15px 0;
+}
+
+.clock:first-child {
+  border-top: none;
+}
+
+.clock h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.clock .date {
+  font-size: 14px;
+  color: #666;
 }
 
 .time {
-  font-size: 1.8rem;
+  font-size: 32px;
   font-weight: bold;
 }
 
 .time small {
-  font-size: 1rem;
+  font-size: 20px;
   vertical-align: middle;
-  line-height: 1.8rem;
-  margin-left: 4px;
-  color: #555;
-}
-
-.date {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.select-box {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-select {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 0.8rem;
-  color: #fff;
+  line-height: 32px;
+  color: #666;
 }
