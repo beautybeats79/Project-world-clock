@@ -1,71 +1,22 @@
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #d8c7ff, #fbd3e9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-}
-
+/* Container */
 .container {
-  max-width: 500px;
-  width: 90%;
-  background: url("https://i.imgur.com/pn3v5fK.png") no-repeat center center /
-    cover;
-  /* ⬆️ cloud background image, you can replace with your own */
-  border-radius: 15px;
+  max-width: 700px; /* ⬅️ Increased size */
+  margin: 60px auto;
+  background: url("images/clouds-bg.jpg") center/cover no-repeat; /* ⬅️ Cloudy background */
   padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.header h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  color: rgba(75, 0, 130, 0.8);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.select-box select {
-  width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-}
-
+/* Clock entries */
 .clock {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px dashed #aaa;
+  border-top: 1px dotted rgba(0, 0, 0, 0.3); /* ⬅️ Faint dotted line */
   padding: 15px 0;
 }
 
 .clock:first-child {
-  border-top: none;
-}
-
-.clock h3 {
-  margin: 0;
-  font-size: 22px;
-}
-
-.clock .date {
-  font-size: 14px;
-  color: #666;
-}
-
-.time {
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.time small {
-  font-size: 20px;
-  vertical-align: middle;
-  line-height: 32px;
-  color: #666;
+  border-top: none; /* ⬅️ Prevent dotted line above first city */
 }
