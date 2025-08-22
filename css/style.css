@@ -82,5 +82,15 @@ footer {
   text-align: center; /* 🔹 centered footer */
   margin: 20px 0;
   font-size: 0.9rem;
-  color: #fff;
+  color: #f0f0f0;
+}
+
+footer a {
+  color: #00e5ff; /* 🔹 bright aqua link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #1de9b6; /* 🔹 light green hover effect */
 }
