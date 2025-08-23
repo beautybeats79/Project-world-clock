@@ -6,9 +6,9 @@ function updateTime() {
     let losAngelesTime = moment().tz("America/Los_Angeles");
 
     losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
-    losAngelesTimeElement.innerHTML =
-      losAngelesTime.format("h:mm:ss") +
-      ` <small>${losAngelesTime.format("A")}</small>`;
+    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 
   let sydneyElement = document.querySelector("#sydney");
@@ -18,9 +18,9 @@ function updateTime() {
     let sydneyTime = moment().tz("Australia/Sydney");
 
     sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do YYYY");
-    sydneyTimeElement.innerHTML =
-      sydneyTime.format("h:mm:ss") +
-      ` <small>${sydneyTime.format("A")}</small>`;
+    sydneyTimeElement.innerHTML = sydneyTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 
   let tokyoElement = document.querySelector("#tokyo");
@@ -30,8 +30,9 @@ function updateTime() {
     let tokyoTime = moment().tz("Asia/Tokyo");
 
     tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
-    tokyoTimeElement.innerHTML =
-      tokyoTime.format("h:mm:ss") + ` <small>${tokyoTime.format("A")}</small>`;
+    tokyoTimeElement.innerHTML = tokyoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 
   let parisElement = document.querySelector("#paris");
@@ -41,8 +42,9 @@ function updateTime() {
     let parisTime = moment().tz("Europe/Paris");
 
     parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-    parisTimeElement.innerHTML =
-      parisTime.format("h:mm:ss") + ` <small>${parisTime.format("A")}</small>`;
+    parisTimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 
   let capeTownElement = document.querySelector("#cape-town");
@@ -52,11 +54,39 @@ function updateTime() {
     let capeTownTime = moment().tz("Africa/Johannesburg");
 
     capeTownDateElement.innerHTML = capeTownTime.format("MMMM Do YYYY");
-    capeTownTimeElement.innerHTML =
-      capeTownTime.format("h:mm:ss") +
-      ` <small>${capeTownTime.format("A")}</small>`;
+    capeTownTimeElement.innerHTML = capeTownTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 }
-updateTime();
 
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  if (cityTimeZone.length > 0) {
+    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+
+    if (cityTimeZone === "Africa/Johannesburg") {
+      cityName = "Cape Town";
+    }
+
+    let cityTime = moment().tz(cityTimeZone);
+    let citiesElement = document.querySelector("#cities");
+    citiesElement.innerHTML = `
+      <div class="city">
+        <div>
+          <h2>${cityName}</h2>
+          <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+        </div>
+        <div class="time">${cityTime.format(
+          "h:mm:ss [<small>]A[</small>]"
+        )}</div>
+      </div>
+    `;
+  }
+}
+
+updateTime();
 setInterval(updateTime, 1000);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
