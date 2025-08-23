@@ -56,8 +56,7 @@ function updateTime() {
       capeTownTime.format("h:mm:ss") +
       ` <small>${capeTownTime.format("A")}</small>`;
   }
-
-  updateTime();
-
-  setInterval(updateTime, 1000);
 }
+updateTime();
+
+setInterval(updateTime, 1000);
