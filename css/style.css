@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80")
-    no-repeat center center fixed; /* 🔹 keep your picture background */
+    no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -12,20 +12,16 @@ body {
 .container {
   flex: 1;
   display: flex;
-  justify-content: center; /* 🔹 center horizontally */
-  align-items: center; /* 🔹 center vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  background: linear-gradient(
-    135deg,
-    #b3e5fc,
-    #c8e6c9
-  ); /* 🔹 light blue → pale green */
+  background: linear-gradient(135deg, #b3e5fc, #c8e6c9);
   border-radius: 20px;
   padding: 20px 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  max-width: 550px; /* 🔹 slightly larger */
+  max-width: 550px;
   width: 100%;
 }
 
@@ -44,7 +40,6 @@ h1 {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-  /* 🔹 dotted line removed */
 }
 
 .time {
@@ -79,18 +74,18 @@ select {
 }
 
 footer {
-  text-align: center; /* 🔹 centered footer */
+  text-align: center;
   margin: 20px 0;
   font-size: 0.9rem;
   color: #f0f0f0;
 }
 
 footer a {
-  color: #00e5ff; /* 🔹 bright aqua link */
+  color: #00e5ff;
   text-decoration: none;
   font-weight: bold;
 }
 
 footer a:hover {
-  color: #1de9b6; /* 🔹 light green hover effect */
+  color: #1de9b6;
 }

@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
+
     <title>World Clock Final Project</title>
   </head>
   <body>
@@ -24,38 +27,44 @@
           </select>
         </div>
 
-        <div class="clocks">
-          <div class="clock">
-            <div>
-              <h3>Los Angeles 🌴⭐🇺🇸</h3>
-              <p class="date">August 15th 2022</p>
-            </div>
-            <div class="time">1:48:15 <small>AM</small></div>
+        <div class="clock" id="los-angeles">
+          <div>
+            <h3>Los Angeles 🌴⭐🇺🇸</h3>
+            <p class="date"></p>
           </div>
+          <div class="time"></div>
+        </div>
 
-          <div class="clock">
-            <div>
-              <h3>Sydney 🦘🐨🇦🇺</h3>
-              <p class="date">August 15th 2022</p>
-            </div>
-            <div class="time">1:48:15 <small>AM</small></div>
+        <div class="clock" id="sydney">
+          <div>
+            <h3>Sydney 🦘🐨🇦🇺</h3>
+            <p class="date"></p>
           </div>
+          <div class="time"></div>
+        </div>
 
-          <div class="clock">
-            <div>
-              <h3>Tokyo 🗼🇯🇵</h3>
-              <p class="date">August 15th 2022</p>
-            </div>
-            <div class="time">1:48:15 <small>AM</small></div>
+        <div class="clock" id="tokyo">
+          <div>
+            <h3>Tokyo 🗼🇯🇵</h3>
+            <p class="date"></p>
           </div>
+          <div class="time"></div>
+        </div>
 
-          <div class="clock">
-            <div>
-              <h3>Paris 🥐🇫🇷</h3>
-              <p class="date">August 15th 2022</p>
-            </div>
-            <div class="time">1:48:15 <small>AM</small></div>
+        <div class="clock" id="paris">
+          <div>
+            <h3>Paris 🥐🇫🇷</h3>
+            <p class="date"></p>
           </div>
+          <div class="time"></div>
+        </div>
+
+        <div class="clock" id="cape-town">
+          <div>
+            <h3>Cape Town 🦁⛰️🇿🇦</h3>
+            <p class="date"></p>
+          </div>
+          <div class="time"></div>
         </div>
       </div>
     </div>
