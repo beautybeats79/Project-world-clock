@@ -60,20 +60,26 @@ function updateTime() {
   }
 }
 
+function formatCityName(timeZone) {
+  return timeZone.split("/")[1].replace("_", " ");
+}
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = "";
 
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
-    cityName = "My Current Location📍";
+
+    cityName = `My Current Location📍 (${formatcityName(cityTimeZone)})`;
   } else if (cityTimeZone.length > 0) {
-    cityName = cityTimeZone.replace("_", " ").split("/")[1];
+    cityName = formatCityName(cityTimeZone);
 
     if (cityTimeZone === "Africa/Johannesburg") {
       cityName = "Cape Town";
     }
   }
+
   if (cityTimeZone.length > 0) {
     let cityTime = moment().tz(cityTimeZone);
     let citiesElement = document.querySelector("#cities");
