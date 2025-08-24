@@ -74,7 +74,7 @@ function updateCity(event) {
       cityName = "Cape Town";
     }
   }
-  if (cityTimeZone.lenght > 0) {
+  if (cityTimeZone.length > 0) {
     let cityTime = moment().tz(cityTimeZone);
     let citiesElement = document.querySelector("#cities");
     citiesElement.innerHTML = `
