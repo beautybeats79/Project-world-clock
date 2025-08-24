@@ -62,18 +62,19 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  let cityName = "";
 
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
-  }
-
-  if (cityTimeZone) {
-    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+    cityName = "My Current Location📍";
+  } else if (cityTimeZone.length > 0) {
+    cityName = cityTimeZone.replace("_", " ").split("/")[1];
 
     if (cityTimeZone === "Africa/Johannesburg") {
       cityName = "Cape Town";
     }
-
+  }
+  if (cityTimeZone.lenght > 0) {
     let cityTime = moment().tz(cityTimeZone);
     let citiesElement = document.querySelector("#cities");
     citiesElement.innerHTML = `
