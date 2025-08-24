@@ -62,7 +62,12 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
-  if (cityTimeZone.length > 0) {
+
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
+
+  if (cityTimeZone) {
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
 
     if (cityTimeZone === "Africa/Johannesburg") {
